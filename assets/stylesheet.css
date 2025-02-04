@@ -1,4 +1,469 @@
+@font-face {
+	font-family: Varela;
+	src: url("fonts/Varela-Regular.ttf");
+}
+
+@font-face {
+	font-family: Sora;
+	src: url("fonts/Sora-VariableFont_wght.ttf");
+}
+
+@font-face {
+	font-family: Lexend;
+	src: url("fonts/Lexend-VariableFont_wght.ttf");
+}
+
 body {
-  font-size: 1.875em;
-  text-align: center;
+	margin: 0;
+	padding: 0;
+	font-family: Lexend;
+	font-size: 1.875em;
+	text-align: center;
+	scroll-behavior: smooth;
+	z-index: 0;
+}
+
+h1 {
+	margin: 0;
+	font-family: Varela;
+	font-size: 1.875em;
+	text-transform: uppercase;
+}
+
+h2 {
+	margin: 0;
+	font-family: Sora;
+	font-size: 1.5em;
+	color: #ffffff;
+}
+
+a {
+    text-transform: uppercase;
+	text-decoration: none;
+	
+	transition: all .2s;
+}
+
+.button {
+	width: fit-content;
+	background-color: #fe0002;
+	border: solid 5px #fe0002;
+	border-radius: 15px;
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #ffffff;
+	font-family: Lexend;
+	text-align: center;
+	font-weight: bold;
+	
+	transition: all .3s;
+}
+
+.button:hover {
+	background-color: #ffffff;
+	border: solid 5px #ffffff;
+	border-radius: 15px;
+	color: #fe0002;
+}
+
+/* Navigation bar */
+.navbar {
+	width: 100%;
+	height: 35px;
+	background-color: #ffffff;
+	display: flex;
+	padding: 15px;
+	position: fixed;
+	margin: 0;
+	justify-content: space-between;
+	align-items: center;
+	font-size: .625em;
+	white-space: nowrap;
+	z-index: 1;
+}
+
+.navbar img {
+	float: left;
+	height: 45px;
+}
+
+.navbar-links {
+	width: 700px;
+	position: fixed;
+	right: 200px;
+	text-align: right;
+}
+
+.navbar-links a {
+	margin-left: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #000000;
+}
+
+.navbar-links a:hover {
+	color: #fe0002;
+}
+
+.navbar .button {
+	position: fixed;
+	right: 30px;
+}
+
+/* Landing */
+#start {
+	width: 100%;
+	height: 105vh;
+	background-image: url("img/homeBorder.svg"), url("img/placeholder/homeBanner.jpg" /* by tawatchai07 on freepik */);
+	background-repeat: no-repeat;
+	background-size: 100%, cover;
+	background-position-y: bottom;
+	background-color: #4682B4;
+	background-blend-mode: normal, multiply;
+	display: flex;
+	flex-direction: column;
+	color: #ffffff;
+	justify-content: center;
+	align-items: center;
+}
+
+#start a, #start i {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 80px;
+	color: #ffffff;	
+}
+
+#start a:hover {
+	color: #f69c9d;
+}
+
+#start i {
+	margin-bottom: 50px;
+	
+	animation: pointDown 5s ease-in-out infinite;
+}
+
+/* Blurb */
+#blurb {
+	display: flex;
+	padding: 75px;
+	justify-content: center;
+	align-items: center;
+}
+
+#blurb i {
+	display: fixed;
+	margin-top: -90px;
+	margin-right: -75px;
+	font-size: 2.25em;
+	color: #f69c9d;
+}
+
+#blurb h2 {
+	margin-right: 50px;
+	padding-right: 50px;
+	border-right: solid 3px #f69c9d;
+	color: #fe0002;
+	text-align: right;
+}
+
+#blurb p {
+	width: 50%;
+	font-size: .75em;
+	text-align: left;
+}
+
+/* Travel Section */
+#travel {
+	min-height: 70vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: top;
+	background-color: #4682B4;
+	background-blend-mode: multiply;
+	padding: 35px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	
+	animation: trips 15s linear infinite;
+}
+
+#travel .button {
+	margin: 5px;
+	font-size: .75em;
+}
+
+.travel-description {
+	width: 550px;
+	height: fit-content;
+	margin-top: 0;
+	margin-left: 25px;
+	margin-right: 25px;
+	padding: 0;
+}
+
+.travel-description p {
+	padding: 25px;
+	font-size: .75em;
+}
+
+.polaroid {
+	width: 395px;
+	height: 450px;
+	background-repeat: no-repeat, no-repeat;
+	background-size: cover, cover;
+	margin-left: 25px;
+	margin-right: 25px;
+	
+	animation: polaroids 15s linear infinite;
+}
+
+/* "Why Us?" */
+#whyus-container {
+	width: vw;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.whyus {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.whyus td{
+	width: 300px;
+	height: 100%;
+	font-size: .625em;
+}
+
+.whyus i {
+	font-size: 2.5em;
+	color: #999999;
+}
+
+.whyus h2 {
+	background-color: #fe0002;
+	border: 5px solid #fe0002;
+	margin-bottom: 35px;
+	font-size: 1.5em;
+}
+
+.whyus h3 {
+	margin: 5px;
+	font-size: .875em;
+}
+
+/* Reviews */
+#reviews-container {
+	width: 260px;
+	height: 310px;
+	margin-top: 5px;
+	margin-bottom: 25px;
+	overflow: hidden;
+}
+
+#reviews-container h3 {
+	position: absolute;
+	float: left;
+	margin: 0;
+	font-size: 1.75em;
+	font-family: Brush Script MT;
+	font-weight: 400;
+	transform: rotate(-15deg);
+}
+
+#reviews {
+	width: calc(280px * 3);
+	margin-top: 20px;
+	
+	animation: slide 15s linear infinite;
+}
+
+.entry {
+	width: 200px;
+	height: 200px;
+	background-color: #ffffff;
+	margin: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 15px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0px 0px 3px #bbbbbb;
+}
+
+#stars {
+	font-size: .75em;
+	color: #f7bf23;
+}
+
+#comment {
+	font-size: .625em;
+	color: #151515;
+}
+
+#name {
+	font-size: .5em;
+	color: #fe0002;
+}
+
+/* "Book Now" */
+#booknow {
+	background-image: url("img/placeholder/booknowBanner.jpg" /* by prostooleh on freepik */);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: #2b2b2b;
+	background-blend-mode: multiply;
+	border-bottom: 25px solid #ffffff;
+	padding: 75px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#booknow h2 {
+	margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+	background-color: #eeeeee;
+	padding: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-size: .5em;
+	text-align: left;
+}
+
+footer h3 {
+	margin: 0;
+	padding: 0;
+	color: #fe0002;
+}
+
+footer img {
+	height: 45px;
+	padding: 10px;
+	vertical-align: middle;
+}
+
+footer table {
+	height: fit-content;
+	border: 0px none;
+	border-spacing: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+footer th:first-child {
+	padding-right: 5px;
+	text-align: center;
+}
+
+.footer-blurb {
+	width: 350px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 0;
+}
+
+.footer-blurb i {
+	font-size: 2em;
+	color: #fe0002;
+}
+
+/* Animations */
+@keyframes pointDown {
+	70% {	
+		margin-bottom: 50px;
+	}
+	85% {
+		margin-bottom: 35px;
+	}
+	100% {
+		margin-bottom: 50px;
+	}
+}
+
+@keyframes trips {
+	0% {
+    background-image: url("img/placeholder/cebu-bg.jpg" /* by yujistyle on istock */);
+  }
+  31% {
+    background-image: url("img/placeholder/cebu-bg.jpg" /* by yujistyle on istock */);
+  }
+  33% {
+    background-image: url("img/placeholder/japan-bg.jpg" /* by freepik */);
+  }
+	64% {
+    background-image: url("img/placeholder/japan-bg.jpg" /* by freepik */);
+  }
+	66% {
+    background-image: url("img/placeholder/africa-bg.jpg" /* from pixabay */);
+  }
+  98% {
+    background-image: url("img/placeholder/africa-bg.jpg" /* by bedneyimages on istock */);
+  }
+	100% {
+		background-image: url("img/placeholder/cebu-bg.jpg" /* by yujistyle on istock */);
+	}
+}
+
+@keyframes polaroids {
+  0% {
+    background-image: url("img/placeholder/polaroid-cebu.png"), url("img/placeholder/polaroid.png" /* original by Textures4Photoshop */);
+  }
+  31% {
+    background-image: url("img/placeholder/polaroid-cebu.png"), url("img/placeholder/polaroid.png" /* original by Textures4Photoshop */);
+  }
+  33% {
+    background-image: url("img/placeholder/polaroid-japan.png"), url("img/placeholder/polaroid.png" /* original by Textures4Photoshop */);
+  }
+	64% {
+    background-image: url("img/placeholder/polaroid-japan.png"), url("img/placeholder/polaroid.png" /* original by Textures4Photoshop */);
+  }
+	66% {
+    background-image: url("img/placeholder/polaroid-africa.png"), url("img/placeholder/polaroid.png" /* original by Textures4Photoshop */);
+  }
+  98% {
+    background-image: url("img/placeholder/polaroid-africa.png"), url("img/placeholder/polaroid.png" /* original by Textures4Photoshop */);
+  }
+	100% {
+		background-image: url("img/placeholder/polaroid-cebu.png"), url("img/placeholder/polaroid.png" /* original by Textures4Photoshop */);
+	}
+}
+
+@keyframes slide {
+  25% {
+    margin-left: 0px;
+  }
+  30% {
+    margin-left: calc(-280px * 1);
+  }
+	60% {
+    margin-left: calc(-280px * 1);
+  }
+	65% {
+    margin-left: calc(-280px * 2);
+  }
+  90% {
+    margin-left: calc(-280px * 2);
+  }
 }
