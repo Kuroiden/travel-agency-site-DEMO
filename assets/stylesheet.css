@@ -278,7 +278,7 @@ a {
 	float: left;
 	margin: 0;
 	font-size: 1.75em;
-	font-family: Brush Script MT;
+	font-family: 'Brush Script MT';
 	font-weight: 400;
 	transform: rotate(-15deg);
 }
